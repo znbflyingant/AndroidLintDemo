@@ -1,0 +1,2 @@
+include ':lintaar'
+include ':app', ':lint_sample'
