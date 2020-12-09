@@ -18,6 +18,7 @@ package com.kornos.lint.demo;
 import com.android.tools.lint.client.api.IssueRegistry;
 import com.android.tools.lint.detector.api.ApiKt;
 import com.android.tools.lint.detector.api.Issue;
+import com.kornos.lint.demo.other.AttrPrefixDetector;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,13 +31,15 @@ public class TestIssueRegistry extends IssueRegistry {
     @Override
     public List<Issue> getIssues() {
         return Arrays.asList(
-                RouteDetector.ISSUE,
-                RouteDetector.CALL_ISSUE,
-                LogDetector.ISSUE,
-                GlideUnusedDetector.ISSUE,
-                ThreadDetector.ISSUE,
-                PngResourceDetector.ISSUE,
-                EventSpaceDetector.ISSUE
+//                RouteDetector.ISSUE,
+//                RouteDetector.CALL_ISSUE,
+//                LogDetector.ISSUE,
+//                GlideUnusedDetector.ISSUE,
+//                ThreadDetector.ISSUE,
+//                PngResourceDetector.ISSUE,
+//                EventSpaceDetector.ISSUE,
+//                SerializableDetector.ISSUE,
+                AttrPrefixDetector.ISSUE
         );
     }
 

@@ -1,0 +1,5 @@
+{
+  "log-usage-message": "请勿使用android.util.Log，建议使用Logger工具类",
+  "value-prefix": "app_",
+  "image-file-maxsize": "100"
+}

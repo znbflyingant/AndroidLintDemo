@@ -36,11 +36,12 @@ public class PngResourceDetector extends Detector implements Detector.ResourceFo
     @Override
     public void checkFolder(@NotNull ResourceContext context, @NotNull String folderName) {
         super.checkFolder(context, folderName);
+        int checkLength = 1024 * 1024 * 2;
         File parent = context.file;
         for (File file : parent.listFiles()) {
             if (file.isFile()) {
                 long length = file.length();
-                if (length > 10) {
+                if (length > checkLength) {
                     System.out.print(file.toString() + "\n");
                     context.report(ISSUE, Location.create(file),
                             "This code mentions `lint`: **Congratulations**");
